@@ -8,27 +8,130 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 2fr 1.5fr 1.5fr 2fr;
     grid-template-rows: 1fr auto;
 
     background-color: hsl(30, 38%, 92%);
     min-height: 100vh;
+
 }
 
 .container {
+    grid-column: 2 / span 2;
     background-color: hsl(0, 0%, 100%);
-    max-width: 500px;
+
+
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 20px;
 
+    justify-content: start;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 35px
 }
 
 img {
+    max-width: 100%;
     height: 500px;
+    object-fit: cover;
     grid-column: span 1;
     grid-row: span 5;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+}
+
+.labelType {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+}
+
+.title {
+    color: hsl(212, 21%, 14%);
+    font-weight: 700;
+    line-height: 35px;
+    font-family: 'Fraunces', sans-serif;
+}
+
+.description {
+    line-height: 1.6rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+
+    font-size: 2rem;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+
+    color: hsl(158, 36%, 37%);
+
+    margin-bottom: 1rem;
+}
+
+.salePrice {
+    font-size: 1rem;
+    font-style: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+
+    margin-left: 1.5rem;
+}
+
+.purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1rem;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+
+    border: none;
+    border-radius: 10px;
+}
+
+.cartImg {
+    width: 1rem;
+    height: 1rem;
+
+    margin-right: .5rem;
+    border-radius: 0;
 }
 
 footer {
+    grid-column: 2/ span 2;
     display: grid;
     justify-content: center;
 }
+
+/* @media screen and (max-width:1000px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    img {
+        grid-column: 1/ -1;
+        grid-row: 1 /2;
+    }
+
+    .content {
+        grid-column: 1/ -1;
+        grid-row: 3 / span 1;
+    }
+} */
